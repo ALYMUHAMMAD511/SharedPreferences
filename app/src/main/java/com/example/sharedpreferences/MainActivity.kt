@@ -11,9 +11,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var savedText : TextView
-        private lateinit var editText : TextInputEditText
-    private lateinit var button : Button
+    private lateinit var savedText: TextView
+    private lateinit var editText: TextInputEditText
+    private lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity() {
         }
         editText = findViewById(R.id.text_input_edit_text)
         savedText = findViewById(R.id.tv_2)
-        button =findViewById(R.id.button)
+        button = findViewById(R.id.button)
 
         getSavedData()
 
         button.setOnClickListener {
-            val storedText : String = editText.text.toString()
+            val storedText: String = editText.text.toString()
             saveData(storedText)
         }
     }
